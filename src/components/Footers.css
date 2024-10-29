@@ -1,0 +1,72 @@
+.appSetup img{
+    height: 20px;
+width: 20px;
+}
+.appSetup{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5em 0.5em 0.1em 0.5em;
+    background-color: white;
+    border: 1px solid #e9e9ee;
+    border-radius: 0.5em;
+    width: fit-content;
+    cursor: pointer;
+}
+.appSetup div{
+    line-height: 15px;
+}
+.appSetup div span{
+    font-size: 10px;
+    font-weight: 800;
+
+}
+.sectionThree p{
+    font-size: 15px;
+    font-weight: 800;
+}
+.downloadApp{
+    display: flex;
+    gap: 10px;
+  margin-bottom: 20px;
+}
+.paymentPartners img{
+    height: 30px;
+    margin-left: 10px;
+    width: 60px;
+}
+.sectionTwo a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #a699a3;
+    line-height: 30px;
+    text-decoration: none;
+    display: block;
+}
+.sectionOne Div p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #a699a3;
+    line-height: 18px;
+   
+}
+.sectionOne img{
+    height: 2em;
+    width: 5em;
+}
+.sectionOne div{
+    width: 32em;
+}
+.footer{
+    display: flex;
+    padding: 3em;
+    justify-content: space-between;
+    background-color: #f4f4f6;
+    border: 1px solid #ebebf0;
+}
+
+@media(max-width:774px){
+.footer{
+    display: block;
+}
+}

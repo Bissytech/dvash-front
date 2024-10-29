@@ -1,0 +1,25 @@
+{
+    "slides": [
+      {
+        "id": 1,
+        "src": "/images/carousel.png",  
+        "alt": "zobo"
+      },
+      {
+        "id": 2,
+        "src": "/images/carousell.png",  
+        "alt": "yoghurt"
+      },
+      {
+        "id": 3,
+        "src": "/images/carousellll.png",
+        "alt": "tigernutmilk"
+      },
+      {
+        "id": 4,
+        "src": "/images/carouselllll.png",
+        "alt": "freshjuice"
+      }
+    ]
+  }
+  

@@ -1,0 +1,130 @@
+.secDiv,
+.thirdDiv {
+  border: 5px solid black;
+  margin: 60px 30px;
+  padding: 80px 30px;
+  border-radius: 20px;
+}
+.thirdDiv {
+  margin-top: 13em;
+}
+.whatsappButton {
+  align-items: center;
+  color: #616a16;
+  text-decoration: none;
+}
+.whatsappButton span {
+  padding: 5px;
+}
+.allDiv {
+  position: relative;
+}
+.secDiv {
+  top: 300px;
+  /* position: absolute; */
+  width: 95%;
+  background-color: white;
+  position: absolute;
+  /* z-index: -10; */
+}
+.secDiv h1,
+.thirdDiv h1 {
+  font-size: 60px;
+  font-weight: 800;
+  color: #474a4c;
+}
+.secDiv img {
+  height: 50px;
+  width: 50px;
+}
+.secSmallDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.firstDiv {
+  background-color: #616a16;
+  height: 30em;
+  width: 100%;
+}
+.inputDiv {
+  display: flex;
+  margin: 50px 0 20px 0;
+  flex-wrap: wrap;
+}
+.inputDiv input {
+  outline: none;
+  height: 2.8em;
+  width: 20em;
+  border: none;
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  margin-right: 10px;
+  padding: 10px;
+}
+.selectDiv div select {
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+  font-weight: 600;
+  height: 2.8em;
+  width: 87%;
+  border-radius: 10px;
+}
+
+.selectDiv div textarea {
+  background-color: #f3f4f6;
+  border: none;
+  height: 15em;
+  width: 87%;
+  margin-top: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  outline: none;
+}
+.selectDiv button{
+    border-radius: 10px;
+    text-align: center;
+padding: 15px 40px;
+border: none;
+font-size: 20px;
+    color: #f2d7c2;
+    background-color:#616a16 ;
+    margin-top: 10px;
+}
+.faqAns{
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+    font-size: 70px ;
+    /* padding: 10px 300px 0 40px; */
+    color:#bcc09c
+}
+.fourthDiv{
+    margin-bottom: 30px;
+    background-color: #616a16;
+    padding-bottom: 30px;
+  
+}
+.DvashAns{
+    background-color: #aa9971;
+   padding-top: 40px;
+}
+@media(max-width:768px){
+  .inputDiv{
+   gap: 10px;
+  }
+  .inputDiv input{
+    height: 50px;
+  
+   }
+.selectDiv select{
+  width: 100%;
+  font-size: 10px;
+  font-size: 1rem;
+}
+.fourthDiv{
+  padding: 30px 30px;
+}
+}

@@ -1,0 +1,125 @@
+.adminPage {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+em{
+  color: #474a4c;
+  padding: 30px;
+}
+/* manage product section */
+.tableBody td img {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+}
+/* .tableItems {
+
+
+  
+} */
+.tableItems td,
+.tableItems th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.tableItems tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.tableItems tr:hover {
+  background-color: #ddd;
+}
+.tableItems th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(227,199,177);
+  color: white;
+}
+.tableItems{
+  position: absolute;
+  width: 80vw;
+  margin-left: 20px;
+}
+.dashLink{
+  /* background-color: red; */
+  text-decoration: none;
+  color: #616a16;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 100px;
+  /* padding: 20px; */
+}
+ul{
+  list-style-type: none;
+  padding-top: 30px;
+}
+.sideBar{
+  background-color: #e3c7b1;
+  height: 100vh;
+  padding-right: 30px;
+  /* width: 100px; */
+}
+/* li{
+  padding: 20px ;
+  font-weight: 700;
+} */
+.theText h1{
+  font-size: 30px;
+  font-weight: 800;
+  color: #474a4c;
+}
+.theText input{
+ outline: #616a16;
+  background-color: #f3f4f6;
+  border: none !important;
+width: 100%;
+padding: 10px;
+height: 40px;
+border-radius: 5px;
+
+}
+form{
+  width: 50vw;
+}
+label{
+  font-size: 20px;
+  color: #474a4c;
+}
+select{
+
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+
+}
+.clickButtn button{
+  background-color: #616a16;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 25px;
+  border: none;
+  font-size: 15px;
+  color: #f2d7c2;
+  margin-top: 20px;
+}
+.editButtn{
+  background-color: #616a16;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px 10px;
+  border: none;
+  font-size: 12px;
+  color: #f2d7c2;
+  margin-top: 20px;
+}
+.delButtn{
+  background-color: #f2d7c2;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px 10px;
+  border: none;
+  font-size: 12px;
+  color: red;
+  margin-top: 20px
+}

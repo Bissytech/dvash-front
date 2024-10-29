@@ -1,0 +1,142 @@
+.divOne {
+  padding: 50px 25px;
+  display: flex;
+  gap: 20px;
+  /* background-color: #ffedb3; */
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  border: 3px dotted black;
+border-radius: 20px;
+}
+.headone h1 {
+  color: #aa9971;
+  text-align: center;
+  padding: 0 0 40px 0;
+}
+
+.divOne div {
+  color: #474a4c;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.words {
+  width: 50%;
+}
+.divOne div p {
+  padding-bottom: 1em;
+}
+.divTwo h1{
+    font-weight: 800;
+    font-size: 50px;
+    text-align: left;
+    padding: 60px 30px;
+   padding: 1em 0.5em;
+ color: #474a4c;
+      }
+
+
+.divOne img {
+  /* width: 480px; */
+  height: 450px;
+  border-radius: 20px;
+}
+.ourcorevalues{
+    display: flex;
+   justify-content: space-around;
+    flex-wrap: wrap;
+   
+}
+.divThree{
+    /* background-color:#474a4c ; */
+   background-color: #616a16;
+   padding: 40px 20px 40px 30px;
+   align-items: center;
+   margin-top: 130px;
+    
+}
+.smallDivThree{
+    display: flex;
+    justify-content: space-around;
+}
+.semiDiv{
+    background-color: #aa9971;
+    padding: 50px 50px;
+    border-radius: 30px;
+    width: 50em;
+   
+}
+.semiDiv span{
+    font-size: 25px;
+    /* line-height: 40px; */
+    
+}
+
+.innerDiv span{
+    display: block;
+    font-weight: 700;
+    font-size: 50px ;
+    padding: 20px;
+    cursor: pointer;
+ 
+}
+
+
+.jumping{
+    animation: jump 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes jump {
+    0%, 100% {
+      transform: translateY(0); 
+    }
+    50% {
+      transform: translateY(-20px); 
+    }
+  }
+.semiInnerDiv{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 70px ;
+    padding: 10px 300px 0 40px;
+    color:#bcc09c
+}
+@media(max-width:768px){
+  .divTwo{
+    padding: 20px;
+  }
+  .semiInnerDiv {
+  gap: 200px ;
+  }
+  .innerDiv span{
+    font-size: 30px;
+  }
+  .semiDiv{
+   
+    padding: 50px 50px;
+    border-radius: 30px;
+    width: 30em;
+ 
+   
+}
+.semiDiv div span{
+font-size: 20px;
+
+}
+
+/* .headone h1{
+  font-size: 20px;
+  padding: 0 !important;
+}  */
+.innerDiv span{
+font-size: 20px;
+}
+.semiDiv{
+  background-color: #aa9971;
+  border-radius: 30px;
+  width: 35em;
+  padding: 10px 30px;
+}
+}

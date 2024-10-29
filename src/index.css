@@ -1,0 +1,240 @@
+/* navbar */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ 
+}
+.navContainer{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 0 1rem; */
+  width: 100%;
+  /* background-color: blue; */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+ 
+}
+/* header{
+  background: white;
+ 
+  padding: 2rem 0;
+} */
+.navBar img {
+  width: 10em;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.active{
+  font-weight: bold;
+}
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  /* overflow: hidden; */
+  /* position: fixed; */
+  /* top: 0; */
+
+}
+/* .navBar div{
+  margin-left: 120px;
+} */
+.theLink:hover {
+  color: #a01b18;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* .accountSetup {
+
+  height: 150px;
+  border: 1px solid #e9e9ee;
+  padding: 1em 1.5em;
+  border-radius: 0.5em;
+  right: 1.5em;
+  background-color: white;
+  top: 70px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+ 
+  display: none !important ;
+} */
+/* here */
+
+.accountSetup{
+  display: block;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #fff;
+  position: absolute;
+  width: 300px;
+  height: 30vh;
+  top: -800px;
+  right: 0;
+  padding-left: 40px;
+  z-index: 10;
+}
+.accountSetup.display{
+  color: red;
+  top: 5%;
+  transition: all 0.3s ease-in ;
+}
+/* here */
+.faUser:hover .accountSetup {
+  display: block !important ;
+}
+/* .accountSetup  {
+  display: block;
+
+} */
+.theLink {
+  text-decoration: none;
+  color: black;
+}
+
+.theHrefs {
+  display: flex;
+  justify-content: space-between;
+}
+.theHrefs a {
+  color: #0f1021;
+ padding: 0.7rem 1rem;
+  text-decoration: none;
+  display: block;
+}
+.shopCart{
+ color: #616a16;
+}
+.theIcons {
+  display: flex;
+}
+.theIcons div {
+  margin-left: 2em;
+}
+.cartNum {
+  background-color: red;
+  color: white;
+  position: absolute;
+}
+/* Dvash Drinks Fact styling */
+.dvashDrinksFact img {
+  height: 20em;
+  width: 15em;
+  border-radius: 1em;
+}
+.dvashDrinksFact {
+  display: flex;
+  margin-bottom: 3em;
+  /* background-color: red; */
+  /* width: 45%; */
+}
+.dvashDrinksFact h4 {
+  color:#41361a ;
+  font-size: 20px;
+  padding-bottom: 1em;
+}
+
+.dvashDrinksFact span {
+  color: #474a4c;
+  font-size: 15px;
+  font-weight: 600;
+}
+.dvashDescp {
+  width: 20em;
+  padding: 2em 1em;
+}
+.dvashDrinks {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-left: 5em; */
+  justify-content: space-evenly;
+  /* background-color: rebeccapurple; */
+  /* width: 100%; */
+}
+.dvashDrink h1 {
+  padding: 1em 0.5em;
+  text-align: center;
+  color: #474a4c;
+}
+
+/* mediaquery effect */
+
+
+
+@media(max-width:768px){
+ 
+  /* .navBar{
+display: flex;
+flex-direction: column;
+  } */
+  .theIcons{
+     margin-left: 300px;
+     
+  }
+
+
+ .faBars{
+  color: #616a16;
+  display: block !important;
+  cursor: pointer;
+ }
+ .carousel{
+  position: relative;
+ }
+ .carousel img{
+  height: 17.5em;
+  width: 35em;
+  margin-bottom: 550px;
+ }
+ .arrow{
+  margin-top: -30em;
+  width: 100px;
+  height: 15px;
+  /* background-color: #a01b18; */
+ }
+
+ .indicators{
+  margin-bottom: 35em;
+ }
+ .dvashDrink {
+  margin-top: -30em ;
+ 
+ } 
+
+.navBar{
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+}
+/* .tabHref{
+ 
+} */
+
+
+.faBarsIcon a {
+  display: block;
+  color: #0f1021;
+  margin-left: 2em;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.theHrefs{
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #fff;
+  position: absolute;
+  width: 350px;
+  height: 60vh;
+  top: -800px;
+  right: 0;
+  z-index: 10;
+}
+.theHrefs.display{
+  top: 5%;
+  transition: all 0.3s ease-in ;
+}
+
+
+}
