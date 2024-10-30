@@ -70,3 +70,14 @@ width: 20px;
     display: block;
 }
 }
+@media(max-width:480px){
+   .abtDvash p{
+    width: 70%;
+    /* background-color: red; */
+   }
+   .footer{
+    /* padding: 200px; */
+    position: absolute;
+   }
+   
+    }

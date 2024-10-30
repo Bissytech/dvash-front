@@ -127,4 +127,16 @@ font-size: 20px;
 .fourthDiv{
   padding: 30px 30px;
 }
+
+}
+@media(max-width:480px){
+  .firstDiv {
+    background-color: #616a16;
+    height: 20em;
+    width: 100%;
+  }
+  .secDiv{
+    width: 125%;
+    margin-top: -100px;
+  }
 }

@@ -49,14 +49,14 @@ const toggleMenuSetup = ()=>{
               HOME
             </NavLink>
 
-            {token && (
+            { 
               <NavLink
                 to="/drinks"
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
                 DRINKS
               </NavLink>
-            )}
+            }
 
             <NavLink
               to="/parfait"

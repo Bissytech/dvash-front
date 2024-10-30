@@ -28,7 +28,7 @@ const Aboutus = () => {
   return (
     <div className="position-relative allContainer">
       <Navbar />
-      <div>
+      <div className="containerDiv">
         <div>
           <div className="headone">
             <h1>
@@ -202,13 +202,16 @@ const Aboutus = () => {
                       strong collaboration. 
                     </span>
                   </div>
+               
                 </div>
               </div>
             </div>
           </div>
+        
         </div>
+        <Footers />
       </div>
-      <Footers />
+     
     </div>
   );
 };

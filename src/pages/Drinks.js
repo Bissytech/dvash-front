@@ -12,13 +12,13 @@ import { useNavigate } from "react-router-dom";
 const Drinks = () => {
   // const [isVisible, setIsVisible] = useState(false);
   const [data, setData] = useState([]);
+  const [showAdded, setShowAdded] = useState(false)
   const dispatch = useDispatch();
   let token = localStorage.getItem("token");
   const carts = useSelector((state) => state.cart.items);
   console.log(carts);
   const handleAddToCart = (info, i) => {
     console.log(info.coverimage);
-
     dispatch(
       addToCart({
         productId: info._id,
@@ -28,6 +28,11 @@ const Drinks = () => {
         coverimage: info.coverimage,
       })
     );
+
+    setShowAdded(true)
+setTimeout(() => {
+  setShowAdded(false);
+}, 3000); 
   };
 
   const navigate = useNavigate();
@@ -36,7 +41,7 @@ const Drinks = () => {
  
     if (token) {
       axios
-        .get("http://localhost:5005/admin/getproduct/drinks")
+        .get("https://dvashdrinks-back.onrender.com/admin/getproduct/drinks")
         .then((res) => {
           console.log(res.data.products);
           setData(res.data.products);
@@ -56,14 +61,16 @@ const Drinks = () => {
   return (
     <div className="position-relative">
       <Navbar />
-      <div >
+      <div className="drinkDiv" >
       <div className="headone">
         <h1>Dvash drinks are readily available just for you...</h1>
        <em> <span style={{display:'none'}}>Click product image for further details about this product</span></em>
       </div>
-      <div className="cartTicked">
+      <div style={{display: `${showAdded?'block': 'none'}`}} className="cartTicked">
       <span className="text-success"><IoMdCheckmarkCircle /></span> 
-      <span>Added to Cart</span>
+      <span>
+  Added to Cart
+</span>
 
 
 

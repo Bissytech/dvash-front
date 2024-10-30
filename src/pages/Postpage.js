@@ -23,7 +23,7 @@ const Postpage = () => {
     event.preventDefault();
     console.log(productname, productdescription, productprice , productCategory);
     axios
-      .post("http://localhost:5005/admin/postproduct", {
+      .post("https://dvashdrinks-back.onrender.com/admin/postproduct", {
         productname,
         productdescription,
         productprice,

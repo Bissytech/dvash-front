@@ -21,6 +21,7 @@ const Contactus = () => {
     <div>
       <div className="allDiv">
         <Navbar />
+        <div className="containerDiv">
         <div className="firstDiv"></div>
         <div className="secDiv">
           <div className="secSmallDiv">
@@ -200,6 +201,8 @@ const Contactus = () => {
 
       
       <Footers />
+        </div>
+       
     </div>
   );
 };

@@ -11,7 +11,7 @@ const Landingpage = () => {
     <div className="position-relative">
       <Navbar />
     
-      <div>
+      <div className="thCarousel">
         <Carousels data={slides} />
       </div>
       <div className="dvashDrink">

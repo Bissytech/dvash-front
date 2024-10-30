@@ -238,3 +238,44 @@ flex-direction: column;
 
 
 }
+
+@media(max-width:480px){
+.navContainer{
+ display: flex;
+margin-left: 70px;
+ box-shadow: none;
+
+ /* background-color: red; */
+}
+.theIcons{
+margin-right: -180px;
+position: absolute;
+}
+
+.carousel img{
+  height: 12.5em;
+  width: 25em;
+/* margin-top: 0; */
+ 
+ }
+ .dvashDrink h1{
+font-size: 20px;
+ 
+ } 
+ .dvashDrink{
+  margin-left: 150px;
+  margin-bottom: 40px;
+  /* position: absolute; */
+  
+
+ }
+ .dvashDrinksFact{
+  display: flex;
+  flex-direction: column;
+ }
+
+.accountSetup{
+  
+  margin-top: 30px;
+}
+}

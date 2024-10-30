@@ -36,7 +36,7 @@ const Parfait = () => {
   useEffect(()=>{
 if (token) {
   axios
-  .get('http://localhost:5005/admin/getproduct/parfaits')
+  .get('https://dvashdrinks-back.onrender.com/admin/getproduct/parfaits')
   .then((res)=>{
     console.log(res.data.products);
     setData(res.data.products)
@@ -57,8 +57,8 @@ const loginRoute = () =>{
 
   return (
     <div className='position-relative'>
- <Navbar/>
-        <div className='headone'>
+ <Navbar/><div className='drinkDiv'>
+ <div className='headone'>
         <h1>Dvash parfait is the best for you and your family....</h1>
         <em> <span style={{display:'none'}}>Click product image for further details about this product</span></em>
         </div>
@@ -79,6 +79,8 @@ const loginRoute = () =>{
      
       
      <Footers/>
+ </div>
+       
     </div>
   )
 }

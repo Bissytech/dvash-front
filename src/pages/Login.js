@@ -15,7 +15,7 @@ const Login = () => {
     ev.preventDefault();
 
     await axios
-      .post("http://localhost:5005/login", {
+      .post("https://dvashdrinks-back.onrender.com/login", {
         email,
         password,
       })

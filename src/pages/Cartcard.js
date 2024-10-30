@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import "./Details.css";
 import { useSelector } from "react-redux";
-
 const Cartcard = ({ serialnum, coverimage, productname, Decrement, Increment, thevalue, amount }) => {
   return (
     <tr>

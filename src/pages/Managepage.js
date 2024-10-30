@@ -12,7 +12,7 @@ const Managepage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5005/admin/manageproduct")
+      .get("https://dvashdrinks-back.onrender.com/admin/manageproduct")
       .then((res) => {
         console.log(res.data.data);
         setData(res.data.data);
@@ -25,7 +25,7 @@ const Managepage = () => {
   const handledelete = (id) => {
     setupdateDel(true);
     axios
-      .delete(`http://localhost:5005/admin/manageproduct/${id}`)
+      .delete(`https://dvashdrinks-back.onrender.com/admin/manageproduct/${id}`)
       .then((res) => {
         setData(data.filter((item) => item.id !== id));
 
@@ -56,7 +56,7 @@ const Managepage = () => {
   };
   const updateproduct = () => {
     
-    axios.post(`http://localhost:5005/admin/updateproduct` , editdata)
+    axios.post(`https://dvashdrinks-back.onrender.com/admin/updateproduct` , editdata)
       .then((res) => {
         setgottenData(true)
         console.log(res);

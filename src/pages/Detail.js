@@ -47,7 +47,7 @@ const Detail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5005/drinks/details/${id}`)
+      .get(`https://dvashdrinks-back.onrender.com/drinks/details/${id}`)
       .then((res) => {
         console.log(res.data.product);
         setDetails(res.data.product);

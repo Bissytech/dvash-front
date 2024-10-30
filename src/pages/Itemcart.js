@@ -81,7 +81,7 @@ const Itemcart = () => {
             </tbody>
 
           </table>
-          <span style={{display:`${carts.length > 0? 'hidden' : 'block'}`}}>Cart is currently empty</span>
+          <span style={{display:`${carts.length > 0? 'none' : 'block'}`}}>Cart is currently empty</span>
 
           {/* Total value and Checkout button */}
         </div>

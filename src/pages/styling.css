@@ -138,6 +138,9 @@
   box-shadow: 2px 3px 8px black;
   padding: 10px;
 }
+.secondDiv button{
+  padding: 0;
+}
 .firstDiv {
   justify-content: center;
   align-items: center;
@@ -197,7 +200,14 @@ tr {
   font-size: 12px;
 }
 .secondDiv button {
-  background-color: #616a16;
+  border-radius: 10px;
+  text-align: center;
+padding: 7px 15px;
+border: none;
+font-size: 14px;
+  color: #f2d7c2;
+  background-color:#616a16 ;
+  margin-top: 10px;
 }
 
 .generalDiv {
@@ -232,4 +242,31 @@ tr {
   .firstHandDiv {
     margin-top: 100px;
   }
+}
+@media(max-width:480px){
+  .bigCart, .secondDiv{
+    height: 50vh;
+    width: 20em;
+    padding: 10px;
+    
+  }
+  .theBigDiv{
+    height: 70vh;
+    width: 20em;
+    padding: 30px;
+    
+  }
+
+    .semiDivv button {
+      
+  padding: 0 !important;
+  
+      
+    }
+    .accValue{
+   position: absolute;
+   margin-bottom: 380px;
+    }
+  
+  
 }

@@ -15,7 +15,7 @@ const Logadmin = () => {
   async function submit(ev) {
     ev.preventDefault();
     
-      await axios.post("http://localhost:5005/admin/login", {
+      await axios.post("https://dvashdrinks-back.onrender.com/admin/login", {
         username,email,password
       }).then((res)=>{
         console.log(res.data)

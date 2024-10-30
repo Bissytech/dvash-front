@@ -6,7 +6,7 @@ const Footers = () => {
     <><div className="footer">
       <div className="sectionOne">
         <img src={require("../assets/Dvashimg.png")} alt="logo" />
-        <div>
+        <div className="abtDvash">
           <p>
             At Dvash, we are passionate about crafting the finest homemade
             drinks in Nigeria. Our commitment to quality and tradition shines

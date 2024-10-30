@@ -48,7 +48,7 @@ const Signup = () => {
     onSubmit: (value) => {
       console.log(value);
       axios
-        .post("http://localhost:5005/sign-up", value)
+        .post("https://dvashdrinks-back.onrender.com/sign-up", value)
         .then((res) => {
           console.log(res.data);
           toast.success("Signup successful");
