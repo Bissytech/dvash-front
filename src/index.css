@@ -33,6 +33,10 @@ header {
 .imggDiv img {
   height: 40px;
   width: auto;
+
+}
+.imggDiv{
+  background-color:#616a16 ;
 }
 .theHrefs {
   display: flex;
@@ -110,7 +114,7 @@ header {
 .dvashDrinksFact {
   display: flex;
   margin-bottom: 3em;
-  background-color: red;
+ 
   /* width: 45%; */
 }
 .dvashDrinksFact h4 {
@@ -133,7 +137,7 @@ header {
   flex-wrap: wrap;
   /* margin-left: 5em; */
   justify-content: space-evenly;
-  background-color: rebeccapurple;
+  /* background-color: rebeccapurple; */
   /* width: 100%; */
 }
 .dvashDrink h1 {
@@ -258,9 +262,7 @@ font-size: 20px;
   /* flex-direction: column !important; */
   /* align-items: flex-start; */
 }
- img{
-  background-color: green;
- }
+
  .faBarsIcon {
   display: block;
   cursor: pointer;

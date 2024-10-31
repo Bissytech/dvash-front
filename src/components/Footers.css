@@ -1,6 +1,9 @@
 .appSetup img{
-    height: 20px;
+    height: 40px;
 width: 20px;
+}
+.sectionOne img{
+    background-color: #616a16;
 }
 .appSetup{
     display: flex;
@@ -63,6 +66,7 @@ width: 20px;
     justify-content: space-between;
     background-color: #f4f4f6;
     border: 1px solid #ebebf0;
+    width: 100%;
 }
 
 @media(max-width:774px){
@@ -72,8 +76,8 @@ width: 20px;
 }
 @media(max-width:480px){
    .abtDvash p{
-    width: 70%;
-    /* background-color: red; */
+    width: 50%;
+    background-color: red;
    }
   
    
