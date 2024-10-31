@@ -23,11 +23,18 @@ const Login = () => {
         console.log(res.data);
         toast.success("Login successful");
         localStorage.setItem("token", res.data.token);
+setTimeout(()=>{
+  navigate("/drinks");
+}, 3000)
 
-        navigate("/drinks");
+
+      
       })
       .catch((err) => {
-        console.log(err);
+        const errorMessage = err?.response?.data?.message
+        toast.error(errorMessage)
+        console.log(errorMessage);
+
       });
   }
 
