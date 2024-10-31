@@ -34,19 +34,29 @@ if (slide === 0) {
 }, [slide,data.length]);
 
 
-  return (
-    <div className='carousel'>
-      <IoIosArrowBack onClick={prevSlide} className='arrow arrow-back'/>
-{data.map((item, index)=>{
- 
-return <img src={item.src} alt={item.alt} key={index} className={slide===index? "slide" : "slide slide-hidden"} />
-})}
-  <IoIosArrowForward onClick={nextSlide} className='arrow arrow-forward' />
-<span className='indicators'>
-{data.map((__,i)=>{
-  return <button className={slide===i? "indicator" : "indicator indicator-inactive"} onClick={()=>setSlide(i)} key={i}></button>
-})}
-</span>
+return (
+  
+  <div className='carousel'>
+  <IoIosArrowBack onClick={prevSlide} className='arrow arrow-back' />
+  {data.map((item, index) => (
+    <div
+      key={index}
+      className={slide === index ? 'slide' : 'slide slide-hidden'}
+    >
+      <img src={item.src} alt={item.alt} />
     </div>
-  )
+  ))}
+  <IoIosArrowForward onClick={nextSlide} className='arrow arrow-forward' />
+  <span className='indicators'>
+    {data.map((_, i) => (
+      <button
+        key={i}
+        className={slide === i ? 'indicator' : 'indicator indicator-inactive'}
+        onClick={() => setSlide(i)}
+      ></button>
+    ))}
+  </span>
+</div>
+)
+
 }

@@ -40,7 +40,7 @@ const toggleMenuSetup = ()=>{
     <header>
       <div className="navContainer">
         <div className="navBar">
-          <img src={require("../assets/Dvashimg.png")} alt="logo" />
+       <div className="imggDiv"><img src={require("../assets/Dvashimg.png")} alt="logo" /></div>   
           <div className={isOpen ? 'theHrefs display' : 'theHrefs'}>
             <NavLink
               to="/"

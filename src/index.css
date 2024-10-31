@@ -5,62 +5,62 @@
   box-sizing: border-box;
  
 }
+header {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  position: relative;
+  z-index: 10;
+}
 .navContainer{
-  max-width: 1440px;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  /* width: 100%; */
   margin: 0 auto;
-  /* padding: 0 1rem; */
-  width: 100%;
-  /* background-color: blue; */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
- 
-}
-/* header{
-  background: white;
- 
-  padding: 2rem 0;
-} */
-.navBar img {
-  width: 10em;
-  border-radius: 50px;
-  cursor: pointer;
-}
-.active{
-  font-weight: bold;
+  position: sticky !important;
+  z-index: -1 !important;
+  top: 0;
 }
 .navBar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: white;
-  /* overflow: hidden; */
-  /* position: fixed; */
-  /* top: 0; */
+  align-items: center;
+  width: 100%;
 
 }
-/* .navBar div{
-  margin-left: 120px;
-} */
+.imggDiv img {
+  height: 40px;
+  width: auto;
+}
+.theHrefs {
+  display: flex;
+  gap: 15px;
+}
+.theHrefs a {
+  color: #0f1021;
+ padding: 0.7rem 1rem;
+  text-decoration: none;
+  display: block;
+}
+.theIcons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.active{
+  font-weight: bold;
+}
+
+
 .theLink:hover {
   color: #a01b18;
   font-weight: 500;
   cursor: pointer;
 }
-/* .accountSetup {
 
-  height: 150px;
-  border: 1px solid #e9e9ee;
-  padding: 1em 1.5em;
-  border-radius: 0.5em;
-  right: 1.5em;
-  background-color: white;
-  top: 70px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
- 
-  display: none !important ;
-} */
-/* here */
 
 .accountSetup{
   display: block;
@@ -84,34 +84,18 @@
 .faUser:hover .accountSetup {
   display: block !important ;
 }
-/* .accountSetup  {
-  display: block;
 
-} */
 .theLink {
   text-decoration: none;
   color: black;
 }
 
-.theHrefs {
-  display: flex;
-  justify-content: space-between;
-}
-.theHrefs a {
-  color: #0f1021;
- padding: 0.7rem 1rem;
-  text-decoration: none;
-  display: block;
-}
+
 .shopCart{
  color: #616a16;
 }
-.theIcons {
-  display: flex;
-}
-.theIcons div {
-  margin-left: 2em;
-}
+
+
 .cartNum {
   background-color: red;
   color: white;
@@ -126,7 +110,7 @@
 .dvashDrinksFact {
   display: flex;
   margin-bottom: 3em;
-  /* background-color: red; */
+  background-color: red;
   /* width: 45%; */
 }
 .dvashDrinksFact h4 {
@@ -149,7 +133,7 @@
   flex-wrap: wrap;
   /* margin-left: 5em; */
   justify-content: space-evenly;
-  /* background-color: rebeccapurple; */
+  background-color: rebeccapurple;
   /* width: 100%; */
 }
 .dvashDrink h1 {
@@ -197,10 +181,10 @@ flex-direction: column;
  .indicators{
   margin-bottom: 35em;
  }
- .dvashDrink {
+ /* .dvashDrink {
   margin-top: -30em ;
  
- } 
+ }  */
 
 .navBar{
   /* background-color: red; */
@@ -240,18 +224,6 @@ flex-direction: column;
 }
 
 @media(max-width:480px){
-.navContainer{
- display: flex;
-margin-left: 70px;
- box-shadow: none;
-
- /* background-color: red; */
-}
-.theIcons{
-margin-right: -180px;
-position: absolute;
-}
-
 .carousel img{
   height: 12.5em;
   width: 25em;
@@ -262,13 +234,7 @@ position: absolute;
 font-size: 20px;
  
  } 
- .dvashDrink{
-  margin-left: 150px;
-  margin-bottom: 40px;
-  /* position: absolute; */
-  
 
- }
  .dvashDrinksFact{
   display: flex;
   flex-direction: column;
@@ -278,4 +244,30 @@ font-size: 20px;
   
   margin-top: 30px;
 }
+/* .navContainer{
+  width: 100%;
+  padding: 0;
+  background-color: blue;
+  margin: 0;
+  padding-top: 40px;
+ } */
+ .navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  /* flex-direction: column !important; */
+  /* align-items: flex-start; */
+}
+ img{
+  background-color: green;
+ }
+ .faBarsIcon {
+  display: block;
+  cursor: pointer;
+}
+.theIcons{
+  margin-left:20px;
+}
+
+
 }

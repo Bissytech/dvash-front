@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
-import Homepage from "./pages/Homepage";
+// import Homepage from "./pages/Homepage";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import App from "./App";
@@ -53,7 +53,7 @@ root.render(
         <Route path="/about-us" element={<Aboutus />} />
         <Route path="/contact-us" element={<Contactus />} />
         <Route path="/log-in" element={<Login />} />
-        <Route path="/home" element={<Homepage />} />
+        {/* <Route path="/home" element={<Homepage />} /> */}
         
         <Route path="/admin/login" element={<Logadmin />} />
         <Route path="/admin" element={<Adminpage />}>
