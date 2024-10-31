@@ -2,7 +2,7 @@
     height: 40px;
 width: 20px;
 }
-.sectionOne img{
+.sectnOne img{
     background-color: #616a16;
 }
 .appSetup{
@@ -60,7 +60,7 @@ width: 20px;
 .sectionOne div{
     width: 32em;
 }
-.footer{
+.footerContainer{
     display: flex;
     padding: 3em;
     justify-content: space-between;
@@ -70,15 +70,17 @@ width: 20px;
 }
 
 @media(max-width:774px){
-.footer{
+.footerContainer{
     display: block;
 }
 }
 @media(max-width:480px){
    .abtDvash p{
-    width: 50%;
-    background-color: red;
+    width: 80%;
    }
-  
+   .sectionOne div{
+    width: 20em;
+}
+
    
     }

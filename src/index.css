@@ -242,6 +242,11 @@ font-size: 20px;
  .dvashDrinksFact{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+ .dvashDrinksFact h4{
+  text-align: center;
  }
 
 .accountSetup{
