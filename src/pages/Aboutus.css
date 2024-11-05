@@ -48,7 +48,7 @@ border-radius: 20px;
     flex-wrap: wrap;
    
 }
-.divThree{
+.divThree, .forQuery{
     /* background-color:#474a4c ; */
    background-color: #616a16;
    padding: 40px 20px 40px 30px;
@@ -140,11 +140,13 @@ font-size: 20px;
   width: 35em;
   padding: 10px 30px;
 }
+.Teamfocuss{
+  margin-top: -100px;
+  display: block !important;
 }
-@media(max-width:480px){
-  .containerDiv{
-    width: 150%;
-  }
+}
+ @media(max-width:480px){
+
   .divOne{
    border: none;
    padding: 0;
@@ -153,5 +155,46 @@ font-size: 20px;
 .semiInnerDiv{
   margin-left: -20px;
 }
+.words {
+  width: 100%;
+  padding: 1em 3em;
+}
+.divOne div p {
+  padding-bottom: 1em;
+}
+.jumping{
+ height: 100px !important;
+ width: 100px !important;
+margin-bottom: 10px;
+}
+.jumping h3{
+  font-size: 15px !important;
+  padding: 40px !important;
+}
+.semiInnerDiv{
+  display: none;
+}
+.miniInnerDiv{
+  font-weight: 600;
+  font-size: 40px ;
+  text-align: center;
+ padding-bottom: 20px;
+  color:#bcc09c
+  
+}
 
-} 
+.divThree{
+  margin-top: 30px;
+display: none;
+}
+.innerDiv span, .innerDiv p{
+font-size: 25px !important;
+ background-color: #bcc09c;
+}
+ .innerDiv p{
+  padding: 20px 30px;
+color: #474a4c;
+  font-size: 20px !important;
+ }
+
+}  

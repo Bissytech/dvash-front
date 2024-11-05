@@ -9,6 +9,7 @@ import { SiVbulletin } from "react-icons/si";
 
 import Valuecardd from "./Valuecardd";
 import Footers from "../components/Footers";
+import Teamfocus from "./Teamfocus";
 const Aboutus = () => {
   const [activeTab, setActiveTab] = useState("Growth");
 
@@ -81,6 +82,7 @@ const Aboutus = () => {
                 <span>Team</span>
                 <span>Focus</span>
               </div>
+            
               <div className="smallDivThree">
                 <div className="innerDiv">
                   <span
@@ -92,7 +94,9 @@ const Aboutus = () => {
                     onClick={() => {
                       handleTabClick("Growth");
                     }}
-                  > <SiVbulletin />
+                  >
+                    {" "}
+                    <SiVbulletin />
                     Growth
                   </span>
                   <span
@@ -104,7 +108,8 @@ const Aboutus = () => {
                         activeTab === "Business" ? "#aa9971" : "#212529"
                       }`,
                     }}
-                  ><SiVbulletin />
+                  >
+                    <SiVbulletin />
                     Business
                   </span>
                   <span
@@ -118,7 +123,8 @@ const Aboutus = () => {
                           : "#212529"
                       }`,
                     }}
-                  ><SiVbulletin />
+                  >
+                    <SiVbulletin />
                     Product & Engineering
                   </span>
                   <span
@@ -130,7 +136,8 @@ const Aboutus = () => {
                         activeTab === "Operations" ? "#aa9971" : "#212529"
                       }`,
                     }}
-                  ><SiVbulletin />
+                  >
+                    <SiVbulletin />
                     Operations
                   </span>
                 </div>
@@ -150,7 +157,7 @@ const Aboutus = () => {
                       together seamlessly. From sourcing the freshest
                       ingredients to delivering exceptional customer service,
                       each team member contributes their unique skills, ensuring
-                      that we deliver the best in health and taste. 
+                      that we deliver the best in health and taste.
                     </span>
                     <span
                       style={{
@@ -176,9 +183,9 @@ const Aboutus = () => {
                         }`,
                       }}
                     >
-                     Our Engineering team practice shared ownership,
-                      where each person’s input and effort are valued equally,
-                      leading to the successful launch of our unique and natural
+                      Our Engineering team practice shared ownership, where each
+                      person’s input and effort are valued equally, leading to
+                      the successful launch of our unique and natural
                       products.Team collaboration doesn’t end with a finished
                       product. We rely on constant feedback, learning, and
                       iteration to refine our products, ensuring that we always
@@ -192,26 +199,26 @@ const Aboutus = () => {
                         }`,
                       }}
                     >
-                      At Dvash, our operations are driven by a
-                      collaborative and dedicated team. From sourcing the
-                      freshest ingredients to crafting delicious drinks and
-                      parfaits, teamwork is at the core of everything we do. Our
-                      skilled staff work hand-in-hand, ensuring that every step
-                      of the process is handled with care, precision, and
-                      passion. We believe that great results are a product of
-                      strong collaboration. 
+                      At Dvash, our operations are driven by a collaborative and
+                      dedicated team. From sourcing the freshest ingredients to
+                      crafting delicious drinks and parfaits, teamwork is at the
+                      core of everything we do. Our skilled staff work
+                      hand-in-hand, ensuring that every step of the process is
+                      handled with care, precision, and passion. We believe that
+                      great results are a product of strong collaboration.
                     </span>
                   </div>
-               
                 </div>
               </div>
             </div>
+
+            <div className="Teamfocuss" style={{display:'none'}}>
+              <Teamfocus />
+            </div>
           </div>
-        
         </div>
         <Footers />
       </div>
-     
     </div>
   );
 };

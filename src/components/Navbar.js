@@ -4,15 +4,19 @@ import { FaUser } from "react-icons/fa";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FaBars } from "react-icons/fa6";
+import { FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
 const [isOpen, setIsOpen] = useState(false)
 const [dropDown, setDropDown] = useState(false)
 const toggleMenu = () =>{
-  setIsOpen(!isOpen)
+  setIsOpen(true)
 }
 const toggleMenuSetup = ()=>{
  setDropDown(!dropDown)
+}
+const cancelContainer = ()=>{
+  setIsOpen(false)
 }
 
   const [totalquantity, setTotalquantity] = useState(0);
@@ -41,8 +45,10 @@ const toggleMenuSetup = ()=>{
       <div className="navContainer">
         <div className="navBar">
        <div className="imggDiv"><img src={require("../assets/Dvashimg.png")} alt="logo" /></div>   
+         
           <div className={isOpen ? 'theHrefs display' : 'theHrefs'}>
-            <NavLink
+             <div className="cancelIcon" onClick={cancelContainer}><FaTimes /></div>
+          <NavLink
               to="/"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
@@ -76,8 +82,11 @@ const toggleMenuSetup = ()=>{
             >
               CONTACT US
             </NavLink>
-            
           </div>
+         
+          
+          
+          
           <div className="theIcons">
             {/* not to get confused */}
             <div onClick={toggleMenu} className="faBarsIcon">

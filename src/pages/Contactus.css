@@ -129,14 +129,27 @@ font-size: 20px;
 }
 
 }
-@media(max-width:480px){
+ @media(max-width:480px){
   .firstDiv {
     background-color: #616a16;
-    height: 20em;
-    width: 100%;
+    height: 15em; 
+ 
   }
   .secDiv{
-    width: 125%;
-    margin-top: -100px;
+    position: absolute;
+    margin: -100px 10px 0 10px;
+    line-height: 30px;
+
   }
-}
+  .secDiv img{
+    height: 30px;
+    width: 30px;
+  }
+  .secSmallDiv h1, .thirdDiv h1{
+    font-size: 30px;
+  }
+  .fourthDiv{
+    display: none;
+  }
+  
+} 

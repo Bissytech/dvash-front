@@ -71,9 +71,6 @@ setTimeout(() => {
       <span>
   Added to Cart
 </span>
-
-
-
       </div>
 
       {!token ? (

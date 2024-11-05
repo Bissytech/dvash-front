@@ -275,6 +275,17 @@ font-size: 20px;
 .theIcons{
   margin-left:20px;
 }
+.cancelIcon{
+  display: block !important;
+  margin-left: 280px;
+margin-top: 12px;
+position: absolute;
+margin-bottom: 360px;
+color: black;
+
+}
+
+
 
 
 }

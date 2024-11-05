@@ -5,6 +5,7 @@ import axios from 'axios'
 import './Drinkcard.css'
 import Drinkcards from './Drinkcards'
 import { useNavigate } from 'react-router-dom'
+import { IoMdCheckmarkCircle } from "react-icons/io";
 
 import {useSelector, useDispatch} from 'react-redux'
 import { addToCart } from "../Store/Cart";
@@ -14,6 +15,8 @@ const Parfait = () => {
   let token = localStorage.getItem('token')
   const [data, setData] = useState([])
   const dispatch = useDispatch()
+  const [showAdded, setShowAdded] = useState(false)
+
  
   
   const carts = useSelector((state) =>(state.cart.items))
@@ -28,10 +31,17 @@ const Parfait = () => {
   productprice:info.productprice,
   productname: info.productname,
   coverimage:info.coverimage
-  }))
+  }));
+
+  setShowAdded(true)
+  setTimeout(() => {
+    setShowAdded(false);
+  }, 3000); 
+    ;
   
   
   }
+  
   const navigate = useNavigate()
   useEffect(()=>{
 if (token) {
@@ -62,6 +72,13 @@ const loginRoute = () =>{
         <h1>Dvash parfait is the best for you and your family....</h1>
         <em> <span style={{display:'none'}}>Click product image for further details about this product</span></em>
         </div>
+
+        <div style={{display: `${showAdded?'block': 'none'}`}} className="cartTicked">
+      <span className="text-success"><IoMdCheckmarkCircle /></span> 
+      <span>
+  Added to Cart
+</span>
+      </div>
 {!token ?  <div className='alertMessage'><p>Hello!!! It seems you are yet to log-in to our website, kindly log-in to enjoy exclusive discount on your purchase</p>
 <button onClick={loginRoute}>Log in</button>
         </div> : <div className='drinkPage'>

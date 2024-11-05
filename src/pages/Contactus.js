@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footers from "../components/Footers";
 import "./Contactus.css";
+import Faq from "./Faq";
 // import icon1 from '../drinksimages/doddle.svg'
 import icon2 from "../drinksimages/drink.svg";
 import icon3 from "../drinksimages/grinning.svg";
@@ -196,7 +197,9 @@ const Contactus = () => {
             </div>
           </div>
         </div>
-       
+       <div>
+        <Faq/>
+       </div>
       </div>
 
       
