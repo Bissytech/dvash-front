@@ -86,6 +86,18 @@
 .bigCart::-webkit-scrollbar {
   display: none;
 }
+.hideButton{
+  display: flex;
+ align-items: center;
+
+}
+.hideButton span{
+position: absolute;
+margin-left: 180px;
+font-size: 12px;
+
+}
+
 .accValue {
   position: absolute;
   margin: 80px 0 10px 0;

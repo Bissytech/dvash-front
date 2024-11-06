@@ -8,10 +8,19 @@ import Navbar from "../components/Navbar";
 
 const Login = () => {
   const navigate = useNavigate();
+ const [Loading, setLoading] = useState(false)
+ const [showPassword,setShowPassword] = useState(false)
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const handleShowPassword=()=>{
+    setShowPassword(!showPassword)
+      }
   async function submit(ev) {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000);
     ev.preventDefault();
 
     await axios
@@ -54,16 +63,25 @@ setTimeout(()=>{
                 id="username"
                 placeholder="Username"
               />
+<div className="hideButton">
 
-              <input
+<input
                 required
                 onChange={(e) => setPassword(e.target.value)}
-                type="password"
+                type={showPassword?'text':'password'}
                 name="password"
                 id="password"
                 placeholder="Password"
               />
-              <button onClick={submit}>Submit</button>
+          <span onClick={handleShowPassword}>{showPassword? 'Hide' : 'Show'}</span>   
+            
+            
+</div>
+
+             <button onClick={submit} type="submit">{Loading === true ? 
+            <div class="spinner-border text-light" role="status">
+            <span class="sr-only"></span>
+          </div>: 'Submit'}</button>
               <ToastContainer />
               <div className="goSignUp">
                 <span>Yet to Signup?</span>

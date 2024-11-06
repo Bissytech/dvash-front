@@ -88,6 +88,16 @@ header {
 .faUser:hover .accountSetup {
   display: block !important ;
 }
+.accountSetup{
+margin-top: 40px;
+
+}
+.cancelIcon{
+  display: none;
+}
+.accountSetup p{
+  padding-bottom: 10px;
+}
 
 .theLink {
   text-decoration: none;
@@ -160,7 +170,12 @@ flex-direction: column;
      margin-left: 300px;
      
   }
-
+  .accountSetup p{
+    padding: 10px 0;
+  }
+.cancelIcon{
+  display: block;
+}
 
  .faBars{
   color: #616a16;
@@ -251,7 +266,7 @@ font-size: 20px;
 
 .accountSetup{
   
-  margin-top: 30px;
+margin-top: 60px !important;
 }
 /* .navContainer{
   width: 100%;

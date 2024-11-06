@@ -1,14 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
 import { FaUser } from "react-icons/fa";
-import { NavLink, Link, useNavigate } from "react-router-dom";
+import { NavLink, Link,useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FaBars } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
 
+
 const Navbar = () => {
+  const location = useLocation();
 const [isOpen, setIsOpen] = useState(false)
 const [dropDown, setDropDown] = useState(false)
+const [showIcons, setShowIcons] = useState(true)
+
+useEffect(()=>{
+const hiddenRoutes = ['/sign-up', '/log-in', '/admin/signup', '/admin/login' ]
+
+if (hiddenRoutes.includes(location.pathname) ){
+setShowIcons(false)
+}else{
+  setShowIcons(true)
+}
+
+}, [showIcons, location])
+
+
 const toggleMenu = () =>{
   setIsOpen(true)
 }
@@ -46,7 +62,7 @@ const cancelContainer = ()=>{
         <div className="navBar">
        <div className="imggDiv"><img src={require("../assets/Dvashimg.png")} alt="logo" /></div>   
          
-          <div className={isOpen ? 'theHrefs display' : 'theHrefs'}>
+     {showIcons &&  <div className={isOpen ? 'theHrefs display' : 'theHrefs'}>
              <div className="cancelIcon" onClick={cancelContainer}><FaTimes /></div>
           <NavLink
               to="/"
@@ -82,61 +98,64 @@ const cancelContainer = ()=>{
             >
               CONTACT US
             </NavLink>
-          </div>
+          </div>}    
          
           
           
           
-          <div className="theIcons">
-            {/* not to get confused */}
-            <div onClick={toggleMenu} className="faBarsIcon">
-              <FaBars
-                style={{ display: "none" }}
-                className="position-relative faBars"
-                size={30}
-              />
+      {showIcons && 
+       <div className="theIcons">
+       {/* not to get confused */}
+       <div onClick={toggleMenu} className="faBarsIcon">
+         <FaBars
+           style={{ display: "none" }}
+           className="position-relative faBars"
+           size={30}
+         />
 
-              {/* check here */}
+         {/* check here */}
 
-             
+        
 
-              {/* check here */}
-            </div>
-            {/* not to get confused */}
+         {/* check here */}
+       </div>
+       {/* not to get confused */}
 
-            <div className="position-relative shopCart">
-              <NavLink to="/itemcart/">
-                <PiShoppingCartSimpleFill className="shopCart" size={30} />
-              </NavLink>
-              <span className="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1">
-                {totalquantity}
-              </span>
-            </div>
-            <div className="faUser">
-              <FaUser onClick={toggleMenuSetup} className="position-relative shopCart" size={30} />
-              <div className={dropDown ? 'accountSetup display' : 'accountSetup'}>
-                <p>
-                  <Link className="theLink" to="/log-in">
-                    Log in
-                  </Link>
-                </p>
-                <p>
-                  <Link className="theLink" to="/sign-up">
-                    Sign up
-                  </Link>
-                </p>
-                <p>
-                  <span
-                    className="theLink"
-                    onClick={logOut}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Log out
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
+       <div className="position-relative shopCart">
+         <NavLink to="/itemcart/">
+           <PiShoppingCartSimpleFill className="shopCart" size={30} />
+         </NavLink>
+         <span className="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1">
+           {totalquantity}
+         </span>
+       </div>
+       <div className="faUser">
+         <FaUser onClick={toggleMenuSetup} className="position-relative shopCart" size={30} />
+         <div className={dropDown ? 'accountSetup display' : 'accountSetup'}>
+           <p>
+             <Link className="theLink" to="/log-in">
+               LOG IN
+             </Link>
+           </p>
+           <p>
+             <Link className="theLink" to="/sign-up">
+               SIGN UP
+             </Link>
+           </p>
+           <p>
+             <span
+               className="theLink"
+               onClick={logOut}
+               style={{ cursor: "pointer" }}
+             >
+               LOG OUT
+             </span>
+           </p>
+         </div>
+       </div>
+     </div>
+      
+      } 
         </div>
       </div>
     </header>

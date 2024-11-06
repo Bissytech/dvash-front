@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import Navbar from "../components/Navbar";
 import * as yup from "yup";
 import { useFormik } from "formik";
@@ -13,7 +13,12 @@ import Navbar from "../components/Navbar";
 
 
 const Signup = () => {
+ const [Loading, setLoading] = useState(false)
+ const [showPassword,setShowPassword] = useState(false)
   const navigate = useNavigate();
+  const handleShowPassword=()=>{
+setShowPassword(!showPassword)
+  }
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -46,13 +51,17 @@ const Signup = () => {
         .required("Password is required"),
     }),
     onSubmit: (value) => {
+      setLoading(true)
       console.log(value);
+      setTimeout(() => {
+        setLoading(false)
+      }, 3000);
       axios
         .post("https://dvashdrinks-back.onrender.com/sign-up", value)
         .then((res) => {
           console.log(res.data);
           toast.success("Signup successful");
-          setTimeout(() => {
+          setTimeout(() => {  
             navigate("/log-in");
           }, 3000);
         })
@@ -113,22 +122,29 @@ const Signup = () => {
             ) : (
               ""
             )}
-            <input
+      <div className="hideButton">
+      <input
               required
-              type="text"
+              type={showPassword?'text':'password'}
               name="password"
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
               placeholder="Password"
-            />
 
-            {formik.touched.password ? (
+            /> 
+             <span onClick={handleShowPassword}>{showPassword? 'Hide' : 'Show'}</span>
+
+        </div>     
+        {formik.touched.password ? (
               <p className="p-0 m-0 ">{formik.errors.password}</p>
             ) : (
               ""
-            )}
+            )} 
 
-            <button type="submit">Submit</button>
+            <button type="submit">{Loading === true ? 
+            <div class="spinner-border text-light" role="status">
+            <span class="sr-only"></span>
+          </div>: 'Submit'}</button>
             <ToastContainer />
           </form>
         </div>
