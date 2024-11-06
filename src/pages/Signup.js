@@ -146,6 +146,13 @@ setShowPassword(!showPassword)
             <span class="sr-only"></span>
           </div>: 'Submit'}</button>
             <ToastContainer />
+            <div className="goSignUp">
+                <span>Have an account?</span>
+                <span>
+                  {" "}
+                  <Link to={"/log-in/"}>Log in</Link>
+                </span>
+              </div>
           </form>
         </div>
       </div>

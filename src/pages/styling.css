@@ -282,6 +282,15 @@ font-size: 14px;
 
     
    }
+   .hideButton input{
+    width: 225px !important;
+
+   
+   }
+   .hideButton span{
+ position: relative !important;
+ margin-left: -50px;
+   }
    .bigCart{
     border: none;
     height: 90vh;
