@@ -181,6 +181,7 @@ tr {
 .generalDiv span {
   font-size: 12px;
 }
+
 .paySum div {
   margin-bottom: 10px;
 }
@@ -210,6 +211,10 @@ tr {
 }
 .secondDiv p {
   font-size: 12px;
+}
+.theBigDiv{
+  width: 400px;
+  overflow: hidden;
 }
 .secondDiv button {
   border-radius: 10px;
@@ -266,8 +271,9 @@ font-size: 14px;
    .allCartItem, .biggerDiv{
     background-color: #e3c7b1;
     height: 100vh;
-    /* background-color: red; */
+ 
    }
+
    .accValue{
     position: fixed;
  margin-bottom: 10px;
@@ -301,7 +307,7 @@ font-size: 14px;
    .theBigDiv, .oneDiv {
     height: 100vh;
     border: none;
-    
+  
   margin-top: 0;
    }
   .secondDiv{

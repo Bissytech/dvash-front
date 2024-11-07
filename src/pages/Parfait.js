@@ -15,6 +15,8 @@ const Parfait = () => {
   let token = localStorage.getItem('token')
   const [data, setData] = useState([])
   const dispatch = useDispatch()
+  const [productLoading, setProductLoading] = useState(true)
+
   const [showAdded, setShowAdded] = useState(false)
 
  
@@ -81,7 +83,9 @@ const loginRoute = () =>{
       </div>
 {!token ?  <div className='alertMessage'><p>Hello!!! It seems you are yet to log-in to our website, kindly log-in to enjoy exclusive discount on your purchase</p>
 <button onClick={loginRoute}>Log in</button>
-        </div> : <div className='drinkPage'>
+        </div> :productLoading?
+        'Product loading':
+        <div className='drinkPage'>
         {data.map((info, i)=>(
        <Drinkcards
        productId = {info._id}

@@ -7,12 +7,18 @@ import './styling.css'
 import Navbar from '../components/Navbar'
 
 const Logadmin = () => {
+ const [Loading, setLoading] = useState(false)
+
   const navigate = useNavigate()
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   async function submit(ev) {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000);
     ev.preventDefault();
     
       await axios.post("https://dvashdrinks-back.onrender.com/admin/login", {
@@ -20,10 +26,15 @@ const Logadmin = () => {
       }).then((res)=>{
         console.log(res.data)
         toast.success("Login successful");
+      setTimeout(()=>{
         navigate('admin/dashboard')
+      })
         
       }).catch((err)=>{
-        console.log(err);
+        const errorMessage = err?.response?.data?.message
+        toast.error(errorMessage)
+        console.log(errorMessage);
+
         
       })
 
@@ -66,7 +77,10 @@ const Logadmin = () => {
           id="password"
           placeholder="Password"
         />
-        <button onClick={submit}>Submit</button>
+           <button onClick={submit} type="submit">{Loading === true ? 
+            <div class="spinner-border text-light" role="status">
+            <span class="sr-only"></span>
+          </div>: 'Submit'}</button>
         <ToastContainer/>
       </form>
 
