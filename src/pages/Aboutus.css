@@ -108,6 +108,13 @@ border-radius: 20px;
   .divTwo{
     padding: 20px;
   }
+  .divOne{
+    flex-direction: column-reverse;
+  }
+  .divOne img{
+  height: 400px;
+  width: 350px;
+  }
   .semiInnerDiv {
   gap: 200px ;
   }
@@ -150,6 +157,8 @@ font-size: 20px;
   .divOne{
    border: none;
    padding: 0;
+  
+
   }
 
 .semiInnerDiv{
