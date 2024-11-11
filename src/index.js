@@ -26,7 +26,7 @@ import Payonline from "./pages/Payonline";
 import Cardpayment from "./pages/Cardpayment";
 import Adminsign from "./pages/Adminsign";
 import Notfound from "./pages/Notfound";
-
+import ScrollToTop from "./components/ScrollToTop";
 
 
 

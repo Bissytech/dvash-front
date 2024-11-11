@@ -1,12 +1,24 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import "./adminpage.css";
+import { useNavigate } from "react-router-dom";
 
 const Adminpage = () => {
+  const navigate = useNavigate()
+const adminLogin=()=>{
+  navigate('/admin/login')
+}
+
+
   return (
     <div>
+      <div className="adminNote">Hello Admin! For optimal functionality and a better experience, kindly visit your page on a laptop.
+<button onClick={adminLogin}>Back to Login Page</button>
+
+      </div>
       <div className="adminPage">
         <div className="sideBar">
+          
           <ul>
             <li>
               <p>

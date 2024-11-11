@@ -8,7 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../Store/Cart";
 import Footers from "../components/Footers";
 import { useNavigate } from "react-router-dom";
-
+import Loader from "./Loader";
 const Drinks = () => {
   // const [isVisible, setIsVisible] = useState(false);
   const [productLoading, setProductLoading] = useState(true)
@@ -92,7 +92,7 @@ setTimeout(() => {
           <button onClick={loginRoute}>Log in</button>
         </div>
       ) : productLoading ? (
-        'Products loading'
+        <Loader/>
       ) : (
         <div className="drinkPage">
           {data.map((info, i) => (

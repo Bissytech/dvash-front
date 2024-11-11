@@ -1,9 +1,13 @@
 import React from "react";
 import "./Footers.css";
+import { NavLink } from "react-router-dom";
 
+import ScrollToTop from "../components/ScrollToTop";
 const Footers = () => {
   return (
-    <><div className="footerContainer">
+    <>
+      <ScrollToTop />
+    <div className="footerContainer">
       <div className="sectionOne">
         <img src={require("../assets/Dvashimg.png")} alt="logo" />
         <div className="abtDvash">
@@ -25,11 +29,40 @@ const Footers = () => {
         </div>
       </div>
       <div className="sectionTwo">
-        <a href="">Home</a>
-        <a href="">Drinks</a>
-        <a href="">Parfait</a>
-        <a href="">About Us</a>
-        <a href="">Contact Us</a>
+      <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Home
+            </NavLink>
+
+            { 
+              <NavLink
+                to="/drinks"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Drinks
+              </NavLink>
+            }
+
+            <NavLink
+              to="/parfait"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Parfait
+            </NavLink>
+            <NavLink
+              to="/about-us"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              About us
+            </NavLink>
+            <NavLink
+              to="/contact-us"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Contact us
+            </NavLink>
       </div>
       <div className="sectionThree">
       <p>Download App</p>

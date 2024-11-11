@@ -8,6 +8,9 @@ const Itemcart = () => {
   const carts = useSelector((state) => state.cart.items);
   const navigate = useNavigate();
 
+  const shopMore =()=>{
+    navigate('/drinks')
+  }
   const confirmpayment = () => {
     dispatch(
       thetotalcost({
@@ -94,7 +97,10 @@ const Itemcart = () => {
           ) : (
             ""
           )}
+           <button onClick={shopMore} className="checkout">Continue Shopping</button>
+
         </div>
+        
       </div>
     </div>
   );

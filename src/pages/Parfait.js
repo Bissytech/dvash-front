@@ -6,7 +6,7 @@ import './Drinkcard.css'
 import Drinkcards from './Drinkcards'
 import { useNavigate } from 'react-router-dom'
 import { IoMdCheckmarkCircle } from "react-icons/io";
-
+import Loader from './Loader'
 import {useSelector, useDispatch} from 'react-redux'
 import { addToCart } from "../Store/Cart";
 import Footers from '../components/Footers'
@@ -84,7 +84,7 @@ const loginRoute = () =>{
 {!token ?  <div className='alertMessage'><p>Hello!!! It seems you are yet to log-in to our website, kindly log-in to enjoy exclusive discount on your purchase</p>
 <button onClick={loginRoute}>Log in</button>
         </div> :productLoading?
-        'Product loading':
+        <Loader/>:
         <div className='drinkPage'>
         {data.map((info, i)=>(
        <Drinkcards
