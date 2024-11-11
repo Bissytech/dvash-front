@@ -60,10 +60,44 @@ const Adminsign = () => {
   const formik = useFormik({
     initialValues:{
       email:"",
-      password:""
+      password:"",
+      username: ''
     },
+    validationSchema: yup.object({
+          username: yup
+            .string()
+            .min(2, "Too Short!")
+            .max(50, "Too Long!")
+            .required("Full name cannot be empty"),
+    
+    
+          email: yup
+            .string()
+            .email("Email must be valid")
+            .required("Email cannot be empty"),
+          password: yup
+            .string()
+            .matches(
+              /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,16}$/,
+              "one letter, one number and between 8 to 16 characters"
+            )
+            .required("Password is required"),
+        }),
     onSubmit:(value)=>{
        console.log(value);
+       axios
+       .post("https://dvashdrinks-back.onrender.com/admin/signup", value)
+       .then((res) => {
+         console.log(res.data);
+         toast.success("Signup successful");
+         setTimeout(() => {  
+           navigate("/admin/login");
+         }, 3000);
+       })
+       .catch((err) => {
+         console.log(err);
+         toast.error(err.message);
+       });
        
     }
   })

@@ -14,28 +14,33 @@ const Logadmin = () => {
   const [password, setPassword] = useState('');
 
   async function submit(ev) {
-    ev.preventDefault(); 
-    setLoading(true);
+  
+    ev.preventDefault();
+    await axios
+    .post("https://dvashdrinks-back.onrender.com/admin/login", {
+      email,
+      password,
+username
 
-    try {
-      const res = await axios.post("https://dvashdrinks-back.onrender.com/admin/login", {
-        username,
-        email,
-        password,
-      });
+    })
+    .then((res) => {
       console.log(res.data);
       toast.success("Login successful");
+      // localStorage.setItem("token", res.data.token);
+setTimeout(()=>{
+navigate("/admin/dashboard");
+}, 3000)
+
+
+    
+    })
+    .catch((err) => { 
       
-      setTimeout(() => {
-        navigate('admin/dashboard');
-      }, 1000); 
-    } catch (err) {
-      const errorMessage = err?.response?.data?.message || "An error occurred";
-      toast.error(errorMessage);
+      const errorMessage = err?.response?.data?.message
+      toast.error(errorMessage)
       console.log(errorMessage);
-    } finally {
-      setLoading(false); 
-    }
+
+    });
   }
 
   return (

@@ -11,9 +11,9 @@ import { useNavigate } from "react-router-dom";
 import Loader from "./Loader";
 const Drinks = () => {
   // const [isVisible, setIsVisible] = useState(false);
-  const [productLoading, setProductLoading] = useState(true)
+  const [productLoading, setProductLoading] = useState(true);
   const [data, setData] = useState([]);
-  const [showAdded, setShowAdded] = useState(false)
+  const [showAdded, setShowAdded] = useState(false);
   const dispatch = useDispatch();
   let token = localStorage.getItem("token");
   const carts = useSelector((state) => state.cart.items);
@@ -30,23 +30,22 @@ const Drinks = () => {
       })
     );
 
-    setShowAdded(true)
-setTimeout(() => {
-  setShowAdded(false);
-}, 3000); 
+    setShowAdded(true);
+    setTimeout(() => {
+      setShowAdded(false);
+    }, 3000);
   };
 
   const navigate = useNavigate();
 
   useEffect(() => {
- 
     if (token) {
       axios
         .get("https://dvashdrinks-back.onrender.com/admin/getproduct/drinks")
         .then((res) => {
           console.log(res.data.products);
           setData(res.data.products);
-          setProductLoading(false)
+          setProductLoading(false);
         })
         .catch((error) => {
           console.log(error);
@@ -54,64 +53,62 @@ setTimeout(() => {
     }
   }, [token]);
 
-
   const loginRoute = () => {
-    localStorage.removeItem('token')
+    localStorage.removeItem("token");
     navigate("/log-in");
   };
 
   return (
     <div className="position-relative">
-    <Navbar />
-    <div className="drinkDiv">
-      <div className="headone">
-        <h1>Dvash drinks are readily available just for you...</h1>
-        <em>
-          <span style={{ display: 'none' }}>
-            Click product image for further details about this product
+      <Navbar />
+      <div className="drinkDiv">
+        <div className="headone">
+          <h1>Dvash drinks are readily available just for you...</h1>
+          <em>
+            <span style={{ display: "none" }}>
+              Click product image for further details about this product
+            </span>
+          </em>
+        </div>
+
+        <div
+          style={{ display: `${showAdded ? "block" : "none"}` }}
+          className="cartTicked"
+        >
+          <span className="text-success">
+            <IoMdCheckmarkCircle />
           </span>
-        </em>
-      </div>
-  
-      <div
-        style={{ display: `${showAdded ? 'block' : 'none'}` }}
-        className="cartTicked"
-      >
-        <span className="text-success">
-          <IoMdCheckmarkCircle />
-        </span>
-        <span>Added to Cart</span>
-      </div>
-  
-      {!token ? (
-        <div className="alertMessage">
-          <p>
-            Hello!!! It seems you are yet to log in to our website. Kindly log in
-            to enjoy exclusive discounts on your purchase.
-          </p>
-          <button onClick={loginRoute}>Log in</button>
+          <span>Added to Cart</span>
         </div>
-      ) : productLoading ? (
-        <Loader/>
-      ) : (
-        <div className="drinkPage">
-          {data.map((info, i) => (
-            <Drinkcards
-              key={i} 
-              productId={info._id}
-              coverimage={info.coverimage}
-              productname={info.productname}
-              productprice={info.productprice.toLocaleString()}
-              addCart={() => handleAddToCart(info)}
-            />
-          ))}
-        </div>
-      )}
-  
-      <Footers />
+
+        {!token ? (
+          <div className="alertMessage">
+            <p>
+              Hello!!! It seems you are yet to log in to our website. Kindly log
+              in to enjoy exclusive discounts on your purchase.
+            </p>
+            <button onClick={loginRoute}>Log in</button>
+          </div>
+        ) : productLoading ? (
+          <Loader />
+        ) : (
+          <div className="drinkPage">
+            {data.map((info, i) => (
+              <Drinkcards
+                key={i}
+                productId={info._id}
+                coverimage={info.coverimage}
+                productname={info.productname}
+                productprice={info.productprice.toLocaleString()}
+                addCart={() => handleAddToCart(info)}
+              />
+            ))}
+          </div>
+        )}
+
+        <Footers />
+      </div>
     </div>
-  </div>
-  
   );
 };
 
