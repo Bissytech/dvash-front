@@ -14,14 +14,16 @@ const Logadmin = () => {
   const [password, setPassword] = useState('');
 
   async function submit(ev) {
-  
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000);
     ev.preventDefault();
     await axios
     .post("https://dvashdrinks-back.onrender.com/admin/login", {
       email,
       password,
-username
-
+      username
     })
     .then((res) => {
       console.log(res.data);
@@ -35,8 +37,7 @@ navigate("/admin/dashboard");
     
     })
     .catch((err) => { 
-      
-      const errorMessage = err?.response?.data?.message
+      const errorMessage = err?.message || 'yada'
       toast.error(errorMessage)
       console.log(errorMessage);
 
@@ -74,7 +75,7 @@ navigate("/admin/dashboard");
               id="password"
               placeholder="Password"
             />
-            <button type="submit">
+            <button onClick={submit} type="submit">
               {loading ? (
                 <div className="spinner-border text-light" role="status">
                   <span className="sr-only"></span>

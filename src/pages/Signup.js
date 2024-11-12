@@ -11,7 +11,6 @@ import "./styling.css";
 import Navbar from "../components/Navbar";
 
 
-
 const Signup = () => {
  const [Loading, setLoading] = useState(false)
  const [showPassword,setShowPassword] = useState(false)

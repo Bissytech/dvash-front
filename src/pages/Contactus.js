@@ -197,7 +197,7 @@ const Contactus = () => {
             </div>
           </div>
         </div>
-       <div>
+       <div className="faq">
         <Faq/>
        </div>
       </div>

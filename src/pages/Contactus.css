@@ -8,6 +8,9 @@
 .thirdDiv {
   margin-top: 13em;
 }
+.faq{
+  display: none;
+}
 .whatsappButton {
   align-items: center;
   color: #616a16;
@@ -118,6 +121,9 @@ font-size: 20px;
   .inputDiv input{
     height: 50px;
   
+   }
+   .faq{
+    display: block;
    }
 .selectDiv select{
   width: 100%;
