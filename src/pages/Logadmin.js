@@ -28,7 +28,7 @@ const Logadmin = () => {
     .then((res) => {
       console.log(res.data);
       toast.success("Login successful");
-       localStorage.setItem("admintoken", res.data.admintoken);
+       localStorage.setItem("adminToken", res.data.adminToken);
   
 setTimeout(()=>{
 navigate("/admin/dashboard");
@@ -38,9 +38,9 @@ navigate("/admin/dashboard");
     
     })
     .catch((err) => { 
-      const errorMessage = err?.message || 'yada'
-      toast.error(errorMessage)
-      console.log(errorMessage);
+      // const errorMessage = err?.message || 'yada'
+      toast.error(err.response.data.message)
+      console.log(err.response.data.message);
 
     });
   }

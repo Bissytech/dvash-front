@@ -1,5 +1,4 @@
 import React from "react";
-// import Navbar from "../components/Navbar";
 import * as yup from "yup";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
@@ -14,49 +13,7 @@ import Navbar from "../components/Navbar";
 
 const Adminsign = () => {
   const navigate = useNavigate();
-  // const formik = useFormik({
-  //   initialValues: {
-  //     email: "",
-  //     username: "",
-  //     password: "",
-  //   },
-  //   validationSchema: yup.object({
-  //     userName: yup
-  //       .string()
-  //       .min(2, "Too Short!")
-  //       .max(50, "Too Long!")
-  //       .required("Full name cannot be empty"),
 
-
-  //     email: yup
-  //       .string()
-  //       .email("Email must be valid")
-  //       .required("Email cannot be empty"),
-  //     password: yup
-  //       .string()
-  //       .matches(
-  //         /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,16}$/,
-  //         "one letter, one number and between 8 to 16 characters"
-  //       )
-  //       .required("Password is required"),
-  //   }),
-  //   onSubmit: (value) => {
-  //       alert("working")
-  //     console.log(value);
-  //   //  axios.post("http://localhost:5005/admin/signup", value)
-  //   //     .then((res) => {
-  //   //       console.log(res.data);
-  //   //       toast.success("Signup successful");
-  //   //       setTimeout(() => {
-  //   //         navigate("/admin/login");
-  //   //       }, 3000);
-  //   //     })
-  //   //     .catch((err) => {
-  //   //       console.log(err);
-  //   //       toast.error(err.message);
-  //   //     });
-  //   }
-  // });
   const formik = useFormik({
     initialValues:{
       email:"",
