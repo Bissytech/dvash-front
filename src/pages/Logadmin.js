@@ -28,7 +28,8 @@ const Logadmin = () => {
     .then((res) => {
       console.log(res.data);
       toast.success("Login successful");
-      // localStorage.setItem("token", res.data.token);
+       localStorage.setItem("admintoken", res.data.admintoken);
+  
 setTimeout(()=>{
 navigate("/admin/dashboard");
 }, 3000)
